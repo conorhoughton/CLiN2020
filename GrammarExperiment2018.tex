@@ -176,14 +176,6 @@ This suggests that both syntax and semantics are important
 contributors during sentence processing, as opposed to just syntax
 alone. 
 %
-%
-In conditions where word order is manipulated so as to produce
-ungrammatical sentences representative of word lists, cortical
-activity still entrains to the frequency at which sentences are
-presented, probably due to the repetition of words from the same
-lexical category at the same position within each sentence. Our
-results are therefore in support of a language system that relies on
-sequential, as opposed to hierarchical rule-based, processing.
 
 \section*{Introduction}
 
@@ -197,8 +189,7 @@ sequential, as opposed to hierarchical rule-based, processing.
 
 The ability of the human brain to rapidly generate meaning from an
 incoming stream of sentences during natural language is
-impressive. There are two competing, but not necessarily mutually
-exclusive, theories describing how we are able to process words. Both
+impressive. There are two competing, but not necessarily exclusive, theories describing how we are able to process words. Both
 of these theories suggest that the smaller discrete units of language,
 such as words and phrases, are concatenated by the brain into larger
 units, such as sentences. What is under debate is the principles that
@@ -219,58 +210,7 @@ predefined rules that determine the serial order of language
 elements. It is therefore of interest to understand how the brain
 realises these rules. Linguists typically describe sentences in terms
 of a hierarchical syntactic structure with a tree-like hierarchy of
-nested phrases, as in Fig.~\ref{fig:tree}.
-
-\begin{figure}[tb]
-\begin{center}
-\begin{tikzpicture}
-\tikzset{every tree node/.style={align=center,anchor=base}}
-\tikzset{level 5+/.style={level distance=2\baselineskip}}
-\tikzset{frontier/.style={distance from root=12\baselineskip}}
-\Tree
-    [.Sentence     
-      [.Noun\_Phrase
-        [.Determiner {\textsl{a}} ]
-        [.Noun  {\textsl{sentence}} ]
-      ]
-      [.Verb\_Phrase 
-        [.Verb {\textsl{is}} ]
-        [.Noun\_Phrase 
-          [.Determiner {\textsl{a}} ]
-          [.Noun {\textsl{tree}} ]
-        ]
-      ]
-    ]
-\end{tikzpicture}
-\end{center}
-\caption{A tree\label{fig:tree}}
-\end{figure}
-
-
-This hierarchical description has been favoured by some neurolinguists
-as a description of how the brain might process incoming sentences and
-generate meaning. In this view, comprehension is underpinned by an
-ability of the brain to abstract over a number of linguistic levels,
-such as syntactic categorisation (verbs, nouns, adjectives etc.) and
-phrase categorisation (verb phrases, noun phrases, etc.), before
-combining them hierarchically according to a learned set of
-grammatical rules. In hierarchical models of language comprehension,
-the brain parses an incoming sequence of words into a nested
-tree-like structure that details the part-whole relationships between
-syntactic constituents and aid sentence comprehension.
-
-% above
-% above say something about how this would require 'tagging' of elements by their tree
-% C 2018-08-13
-%%
-%% not sure now, this is already implicit in what's there
-%% C 2018-08-14
-
-% paragraph break
-% C 2018-08-13
-
-% trimmed a bit
-% C 2018-08-14
+nested phrases.
 
 In support of this point-of-view, it has been demonstrated, using MEG
 in \cite{DingEtAl2016} and using EEG in \cite{DingEtAl2017} that
@@ -292,18 +232,6 @@ sentences.  These results can be interpreted as evidence for neural
 entrainment to discrete higher-level syntactic structures, as opposed
 to neural tracking of, for example, transition probabilities during
 sentence processing.
-
-% do we talk about statistics before the above, or after it?
-% C 2018-08-14
-%% I think after because the prevailing view following on from previous experiments has been one of hierarchical processing and so this should be introduced first maybe, and then we can go on to describe the statistics point of view and then frame our results around that.
-%% A 22/08/2018
-
-%
-% hierarchical tree figure needed here
-% C 2018-08-13
-%
-%% done
-%% C 2018-08-14
 
 \begin{figure}[tb]
 \begin{center}
@@ -330,27 +258,10 @@ sentence processing.
 \caption{Tree with frequencies \label{fig:freq_tree}}
 \end{figure}
 
-
-% this paragraph is good but trying to reduce length of intro
-% consider merging into discussion
-% C 2018-08-14
-
-%\cite{DingEtAl2016} argue that hierarchical linguistic structures are
-%generated internally by necessity in a manner dependent upon
-%syntax. They put forward a language processing scheme whereby language
-%statistics, at any level, are considered to be largely irrelevent. As
-%\cite{FrankYang2018} state, many aspects of language processing cannot
-%be reduced to statistics at the word-level. People are capable of
-%learning and applying syntactic rules in a non-statistical manner, for
-%example when using a second language learnt by explicit
-%instruction.
-%
-%
-
 However, a considerable amount of behavioural data highlights the
 significance of statistics during language comprehension. At the level
 of word-statistics, word recognition times can largely be determined
-by their frequency of occurance in the language, word reading times
+by their frequency of occurrence in the language, word reading times
 have been found to closely correlate with word probability and when an
 ambiguous sentence has to be interpreted, the most probable
 interpretation is most likely to be chosen (for review see
@@ -360,81 +271,20 @@ constraints imposed by prior context on possible sentence
 continuations \cite{GibsonPearlmutter1998}. Language statistics must
 therefore play a role in human language processing. 
 
-% not sure what this bit means
-% C 2018-08-14
-%% I meant to say that statistics need not only apply at the level of individual words, but could also apply at the phrase level when making a sentence. As in, if you have a complete noun phrase then the brain may be able to make predictions that a verb phrase will follow. As in statistics could occur at multiple levels, or chunks I guess, of a sentence.
-%% A 2018-08-22
 
-%Furthermore,
-%statistical processing of language does not need to be restricted to
-%the word-level but can also apply to parts of the syntactic
-%structure. Sequences of words can be chunked before being processed
-%sequentially (Christiansen and Chater, 20), just as phonemes are to
-%generate particular words.
-
-% not getting rid of this bit, just 
-% trying to give my understand and we can try to come up
-% with something half way between the two
-% C 2018-08-14
-
-
-%Given the statistical nature of language, constituent units can be
-%concatenated in terms of serial order principles governed by
-%probabilities. This would render the superficial structure of the
-%linguistic signal sequential in nature and emphasizes that
-%non-hierarchical processing does not have to be restricted to the
-%single-word level. In a sequential description of language processing
-%smaller linguistic units, such as words, can be chunked into larger
-%linguistic units, such as phrases, governed by linear order. In this
-%way lexical category is established by abstracting over words. At the
-%time of writing, it is not known whether syntactic categories are
-%psychologically real or not, but a sequential account of language
-%processing would expect them to be. Frank and Yang 2018 adhere to the
-%view that language processing relies on processing sequences of word
-%representations and make a convincing argument against Ding et al's
-%interpretation of their MEG/EEG results. In order to resolve whether
-%the results reported by Ding et al., 2016 are generated by
-%hierarchical phrase-structure building, or whether they are driven
-%solely by the stimulus' lexical properties, Frank et al., 2018 propose
-%a computational model that assumes no higher level of abstraction than
-%a syntactic/semantic clustering of word representations. The model
-%represents words in a temporal sequence and has no knowledge of the
-%statistics associated with word sequences and/or syntactic structures.
-
-In a statistical description of neurolinguistics, the brain, in a
-Bayesian manner, exploits the rich statistical structure of langauge
+In a statistical description, the brain, in a
+Bayesian manner, exploits the rich statistical structure of language
 to predict possible identities for syllables, words and phrases and
 uses these predictions to aid the identification of the actual
 linguistic input. In this picture, the interpretation of language
 involves the production, reevaluation and resolution of predictions,
 and grammar has evolved out of a kind of \lq{}language game\rq{} where
 speakers aid each other by propagating conventions about how words are
-arranged, enriching the statistical structure of utterances. 
-%
-% maybe include here the commented out bit about statistics not being needed
-% for learned lanaguages
-% C 2018-08-14
-%
-In this viewpoint syntactic categories are not psychologically real,
-but epiphenominal to a statistical based response to linguistic
+arranged, enriching the statistical structure of utterances and syntactic categories are not psychologically real, but epiphenominal to a statistical based response to linguistic
 stimuli.
 
-% need to tifhten this up a bit
-% C 2018-08-14
-
-% is Frank and Yang the same as Frank et al or 
-% have I messed everything up?
-% C 2018-08-14
-%% This is my fault - there is a review paper by Frank et al., 2012 and then the model is Frank and Yang, 2018. So they are two different papers, but I may well have labelled them incorrectly in the text and will go back and make sure this is correct.
-%% A 2018-08-22
-
-% more is needed to describe what Frank and Yang did
-% C 2018-08-13
-% in particular the words 'were simulated' need more details
-% C 2018-08-14
-
 In this context \cite{FrankYang2018} propose a computational model that
-assumes no higher level of abstraction than a syntactic/semantic
+assumes no higher level of abstraction than a semantic
 clustering of word representations. Their model represents each word
 as a high-dimensional vector chosen so that the proximity structure of
 the vectors matches the statistical relationship between the
@@ -445,54 +295,6 @@ observed experimentally. This suggests that the peaks could be
 generated using only the lexical information within the word stimuli,
 without the need for any knowledge of syntax. 
 
-%this bit is already covered
-% C 2018-08-14
-
-%It can therefore be
-%argued that the power spectrum data used by Ding et al., 2015 as
-%evidence for hierarchical syntactic structure building could equally
-%be generated by a brain mechanism that relies purely on sequences of
-%word representations.
-
-% this needs a bit more, a bit describing the model
-% it might also go up with the rest of the hierarchy stuff
-% C 2018-08-14
-
-However, a computational model that uses time to
-encode sentence hierarchy and supports a hierarchical account of
-natural language processing is also capable of producing these results
-(Martin and Doumas, 2017).
-
-
-
-
-% work needed on this paragraph since it sets out our experiment
-% C 2018-08-14
-%
-% commented out for now and some of it incorporated into the next
-% paragraph; but not definitively rules out.
-% C 2018-08-14
-%
-%% We are not trying to argue that hierarchical syntactic processing
-%% doesn't happen, it is just that if there is a simpler sequential
-%% explanation this would likely be favoured. In the current study we
-%% aimed to investigate whether, and to what extent, hierarchical
-%% syntactic structure building is present during language comprehension
-%% over and above sequential processing. Given that both the arguments
-%% for hierarchical representation and word-level statistics can be used
-%% to explain the experimental results outlined above it is of interest
-%% to design a set of experiments to help resolve this issue. Frank et
-%% al., 2018 make an interesting suggestion in their paper and propose an
-%% experiment to test the competing hypotheses. In sentence stimuli made
-%% up of four single-syllable words, where words are randomly ordered in
-%% terms of lexical category but with every 4th word as a verb, a
-%% sequential processing hypothesis would predict a 1/0.32 Hz (sentential
-%% rate) peak in ITPC due to the repetition of the verb. A model of
-%% hierarchical syntactic structure building would predict the absence of
-%% a peak at the sentential rate. We aimed to test this using EEG.
-
-% edited for length
-% C 2018-08-14
 Here Electroencephalography (EEG) is used to measure responses to
 simple meaningful sentences in comparison to sentences with two different
 manipulations; nonsense sentences which have been deliberately chosen
@@ -500,25 +302,10 @@ to have little sensible meaning, and re-ordered sentences, in which
 syntax has been destroyed by re-ordering the words. The aim of this
 experiment is to help to distinguish between the two competing
 explanations for the phrase- and sentence-level phase locking observed
-in \cite{DingEtAl2016,DingEtAl2017}. The re-ordered sentence condition
-is suggested in part by the hypothesis proposed in
-\cite{FrankYang2018} that a sentence stimuli made up of four
-single-syllable words, with words randomly ordered in terms of lexical
-category except that every fourth word is a verb, would show phase
-locking at the sentence rate of 1/1.28 Hz, and possibly also at 2/1.28
-Hz as a resonance of the 1/1.28 Hz phase locking.
+in \cite{DingEtAl2016,DingEtAl2017}.
 
-
-% maybe add a paragraph here with something about the results
-% C 2018-08-14
-%% A 2018-08-14
-%% done
-
-We used EEG to record neural activity while subjects listened to continuous streams of four single-syllable words that can combine to form a sentence consisting of a noun phrase and a verb phrase. We found that cortical responses become
-phase-locked to the frequencies at which syllables, phrases and
-sentences are presented. A peak in the ITPC value is observed at the sentential rate
-(1/1.28 Hz). This is similar for sentences that are both grammatically correct and with semantically sensible words and sentences that are
-ungrammatical in terms of word order and contain semantically
+We used EEG to record neural activity while subjects listened to continuous streams of four single-syllable words that can combine to form a sentence consisting of a noun phrase and a verb phrase. We found that cortical responses become phase-locked to the frequencies at which syllables, phrases and
+sentences are presented. A peak in the ITPC value is observed at the sentential rate (1/1.28 Hz). This is similar for sentences that are both grammatically correct and with semantically sensible words and sentences that are ungrammatical in terms of word order and contain semantically
  unrelated words. The peak in the ITPC value at the rate of phrase presentation
  (2/1.28 Hz) is maximal when sentences are both grammatical and make
  semantic sense. This peak is significantly reduced when either grammar or
@@ -532,8 +319,7 @@ ungrammatical in terms of word order and contain semantically
 Eighteen right-handed, native English speakers (11 female, mean age 26
 years (range 22 - 32 years)) participated in this study. All
 participants gave written, informed consent prior to undertaking the
-study and were paid £20. The experimental procedures were approved by
-...
+study and were paid £20. Ethical approval for our experimental procedures were obtained from the University of Bristol Faculty of Science ethics board. All methods were performed in accordance with the relevant guidelines and regulations.
 
 \subsection*{Stimuli}
 
@@ -549,19 +335,19 @@ available Praat software \cite{BoersmaWeenink2018}.
 categories: adjective, subject, verb, object. Words were selected if
 they were synthesised clearly by the speech synthesiser and if they
 could be easily categorised into a distinct word category.  This was
-to avoid verbs, such as drink, ride and walk for example, which can
+to avoid verbs, such as ride which can
 often be used as nouns. Nouns were pluralised and all sentences were
 played in the present tense.
 
-% work done on this to describe what Tom did 
-% C 2018-08-14
-
 Sentences were made by randomly selecting words from each of the four
-word categories in the order adjective, subject noun, verb, object
-noun. These sentences were then independently ranked in terms of how
+word categories in the order 
+\begin{quote}
+adjective, subject noun, verb, object noun
+\end{quote}
+These sentences were then independently ranked in terms of how
 much sense they made by 290 online participants recruited through
 Prolific Academic. Participants were presented with 110 pairs of
-sentences, ten of these were an attention trap, participant were asked
+sentences, ten of these were an attention trap; participant were asked
 to press \lq{F}\rq{} in response to sentences containing the word
 \lq{}fish\rq{} and were punished with a time out if they made a
 mistake. For the remaining 100 pairs they selected the sentence which
@@ -569,112 +355,28 @@ mistake. For the remaining 100 pairs they selected the sentence which
 information for the full text of the participant instructions). Elo
 chess ranking \cite{Elo1978} was used to derive individual scores for
 each sentence from the pairwise comparisons. This established a
-ranking from sense to nonsense for each sentence. The top 20 sentences
-deemed to make the most sense were chosen to form the
-\lq{}sensical\rq{} sentence condition and the bottom 20 sentences
-deemed to make the least sense were chosen to form the \lq{}nonsensical\rq{}
-sentence condition. These conditions are described in more detail
-below.
+ranking from sense to nonsense. The top 20 sentences were chosen to form the
+\lq{}sensical\rq{} sentence condition and the bottom 20 were chosen to form the \lq{}nonsensical\rq{}
+sentence condition. 
 
-% we need to remove the word 'control' because there are two 
-% types of control, the word order and the sense
-% C 2018-08-14
-
-This EEG experiment consisted of four different sentence conditions:
-sensical sentences, nonsensical sentences, re-ordered sensical
-sentences and re-ordered nonsensical sentences. Sentences within each
-condition were made up from the same pool of single-syllable words.
-
-In conditions one and two, the four-word sentences were presented in
-the order adjective, subject, verb, object. This means that the first
-two words within a sentence form a noun phrase and the second two
-words combine to form a verb phrase. An example sentence from
-condition one is shown below.
-%
-% suggest changing to 'loud dogs hunt cats' to drain the
-% sentence of all possible meaningful content!
-% C 2018-08-13
-%
-% no sure how to deal with the numbering of sentences
-% C 2018-08-14
-%
-%
-\begin{equation}
-\label{eq:sensical_sentence}
-\text{\lq{}huge trams scare boys\rq{}}
-\end{equation}
-%
-% A 2018-08-24
-% Trying to find a good example sentence that isn't loud dogs hunt cats. 
-% Huge trams scare boys?
-% I removed this sentence 'Dogs can be loud, in
-% cartoons and the popular imagination they hunt cats and dogs busy
-% hunting cats are often loud.' Because anything I replaced it with now we've changed the example didn't seem anywhere near as good, but maybe it is necessary. Looking through our sentences now I can't find any I want to use as an example!
-
-Four-word sentences played in condition one, such as the sentence in
-sentence 1, are grammatically correct and seem like plausible
-sentences, from which meaning can be derived. Sentences in condition two share the same
-word order as condition one and are therefore grammatically correct.
-However, the words do not make semantic sense together. An example of
-one of the nonsensical sentences from condition two is:
-%
-% removed initial cap, changed quotes to lq rq
-%
-%
-\begin{equation}
-\label{eq:nonsensical_sentence}
-\text{\lq{}bored mugs write beds\rq{}}
-\end{equation}
-%
-The third and fourth conditions have a different word order to
-conditions one and two. In conditions three and four, words are put
-together in the order verb, subject, object, adjective. This makes
-sentences that are ungrammatical and are not perceived as making
-sentential sense. Sentences in condition three are made up of
-reordered sentences from those in condition one. An example sentence
-from condition three is shown below.
-%
-\begin{equation}
-\label{eq:sensical_sentence_ctrl}
-\text{\lq{}scare trams boys huge\rq{}}
-\end{equation}
-%
-% *
-% actually did we use 'hunt', it is a verb and a noun!
-% C 2018-9-17
-%
-Condition four is the same as condition three except that the
-sentences are made from reordering the sentences played in condiiton
-two. An example sentence from condition four is shown below.
-%
-\begin{equation}
-\label{eq:nonsensical_sentence_ctrl}
-\text{\lq{}write mugs beds bored\rq{}}
-\end{equation}
-%
-% add a 2X2 table here summarizing the conditions
-% C 2018-9-17
-%% done
-%% C 2018-9-17
+Based on these sensical and nonsensical sentences four different conditions were created: the
+original sensical sentences and nonsensical sentences along with two ungrammatical conditions in which the words for sensical and nonsensical sentences were re-ordered as
+\begin{quote}
+     verb, subject noun, object noun, adjective
+\end{quote}
 These four conditions are summarized in Table~\ref{tab:conditions}.
 
 \begin{table}
 \begin{tabular}{l|ll}
 &sensible&nonsense\\
 \hline\\
-grammatical&\textbf{1}: huge trams scare boys&\textbf{2}: bored mugs write beds\\
-re-ordered &\textbf{3}: scare trams boys huge&\textbf{4}: write mugs beds bored
+grammatical&\textbf{GS}: huge trams scare boys&\textbf{GN}: bored mugs write beds\\
+ungrammatical &\textbf{US}: scare trams boys huge&\textbf{UN}: write mugs beds bored
 \end{tabular}
-\caption{A summary of the four conditions; condition number is in
-  bold, the sentence beside the number gives an
+\caption{A summary of the four conditions; the condition label used in the text is in
+  bold, the sentence beside this gives an
   example.\label{tab:conditions}}
 \end{table}
-
-The word order in conditions three and four was chosen so that
-word-categories were repeated in the same place in every four-word
-sentence string, but the first word of a following sentence would not
-combine to form a noun phrase or a verb phrase with the last word of
-the preceding sentence.
 
 \subsection*{Experimental Procedures}
 
@@ -691,76 +393,43 @@ block was played after a delay of 1200 ms. Blocks were presented in a
 random order and the order of the blocks was counterbalanced across
 participants.
 
-
 \subsection*{EEG Recording}
 
 EEG was continuously recorded with a 32-channel EEG system (),
 digitized at a sampling rate of 1,000 Hz (bandpass filter = 0.01–400
-Hz) and referenced to the vertex (Cz), as in Ding et al., 2017. The
-impedence of the electrodes was kept below 5kohms. Eyeblink artifacts were removed using ICA like in Ding et al., 2017. Our parameters for
-removing a component were slightly different given that we used a
-32-channel system rather than a 128-channel system and we did not
-dimension reduce our EEG signals using PCA. An independent component
+Hz) and referenced to the vertex (Cz), as in \cite{DingEtAl2017}. The
+impedance of the electrodes was kept below 5kohms. Eyeblink artifacts were removed using ICA: an independent component
 was removed if in its topography the mean power over the most frontal
 three channels was more than twenty times stronger than the mean power
-over all other channels.
-
-As in \cite{DingEtAl2017}, the signals of interest are in the
+over all other channels. The signals of interest are in the
 low-frequency region, at 1/1.28, 2/1.28, and 4/1.28 Hz and so the EEG
 signal was lowpass filtered to 25 Hz. Data were referenced offline to
 a common average reference and the responses to each individual trial
-were epoched. Upon sound onset there is a transient EEG response and
-so the first sentence in each trial was removed from the data. This
-meant that the overall trial length was 15.36 seconds (1.28 seconds x
-12 sentences).
+were epoched. 
 
 \subsection*{Data analysis}
 
-% *
-% have you tried using the Wilcoxon ranked-sign test?
-% C 2018-08-16
-%% As we discussed this gives significance between the phrase peaks when comparing conditions 1 and 2 as well.
-%% 2018-08-22
-% similarly we should have a graph where the four conditions are 
-% laid out on the x-axis with all the ITPC scores plotted vertically
-% for each condition, but with the points for a single participant
-% joined from condition to condition
-% C 2018-08-16
-%% I have made this, but it needs beautifying
-%% 2018-08-22
+Upon sound onset there is a transient EEG response and
+so the first sentence in each trial was removed from the data. This
+meant that the overall trial length was 15.36 seconds (1.28 seconds x
+12 sentences). The remaining EEG signal was converted into the frequency domain using the discrete
+fourier transform with a frequency resolution of 0.065 Hz, that is, 1/15.36 Hz. The complex-valued Fourier coefficient of the trail $k$, $X_k(f)$, is then used to calculate the inter-trial phase coherence and the evoked power. 
 
-\subsubsection*{Inter-Trial Phase Coherence}
-
-The inter-trial phase coherence is defined in equation (5)
-\begin{equation}
-\label{eq:itpc}
-R(f)=\left(\sum_k{\cos{\theta_k}}\right)^2/K+\left(\sum_k{\sin{\theta_k}}\right)^2/K
-\end{equation}
-where $\theta_k$ is the phase angle of each complex-valued Fourier coefficient, i.e., $\theta_k = < X_k(f)$.
-
-
-\subsubsection*{Evoked Power}
-
-For each trial the first sentence was removed so that each trial was
-15.36 s in duration (12 sentences × 1.28 s/sentence). The remaining
-EEG signal was converted into the frequency domain using the discrete
-fourier transform with a frequency resolution of 0.065 Hz, i.e.,
-1/15.36 Hz. The evoked power spectrum is shown below in equation (6).
+The evoked power is
 \begin{equation}
 \label{eq:power}
 E(f)=\left|\sum_k{X{_k}(f)}\right|^2 / K
 \end{equation}
-where K is the total number of trials and $X_k(f)$ is the complex-valued
-Fourier coefficient of the EEG response during trial $k$. This value is
+where $K$ is the total number of trials and  This value is
 a function of frequency $f$. The evoked power reflects the power of EEG
 responses that are timelocked to the auditory speech input. It is the
 same as the power spectrum of the EEG response waveform averaged over
-trials.
-
-% need to decide on eg 2/1.28 or 1/0.64
-% C 2018-08-14
-%% changed to 1/0.64
-%% A 2018-08-24
+trials. The inter-trial phase coherence is defined in Eq.~\ref{eq:itpc}
+\begin{equation}
+\label{eq:itpc}
+R(f)=\left(\sum_k{\cos{\theta_k}}\right)^2/K+\left(\sum_k{\sin{\theta_k}}\right)^2/K
+\end{equation}
+where $\theta_k$ is the phase angle of each complex-valued Fourier coefficient: $\theta_k = < X_k(f)$. As with the evoked power, it measures the timelocked response; because it uses only the phase-angle rather than the whole response, it does not show the same $1/f$ noise that is present in the evoked power.
 
 For each trial, the mean alpha band frequency (8–12 Hz) power (as
 calculated in Eqn.~\ref{eq:itpc}) over all channels was calculated and
@@ -771,21 +440,18 @@ phrasal frequency and evoked alpha band power.
 
 \subsection*{Significance Testing}
 
-\subsubsection*{ITPC responses}
-A one-tailed paired t-test was used to test whether the inter-trial phase coherence value in a given frequency bin was significantly stronger than the average of the neighboring four frequency bins (two bins on either side), as in Ding Et Al., 2016. This was applied to all frequency bins below 5 Hz and a FDR correction for multiple comparisons was applied. 
+As in \cite{DingEtAl2016} a one-tailed paired t-test was used to test whether the inter-trial phase coherence value in a given frequency bin was significantly stronger than the average of the neighboring four frequency bins, two bins on either side. This was applied to all frequency bins below 5 Hz and a FDR correction for multiple comparisons was applied. 
 
-
-\subsubsection*{Comparison of peak heights between conditions}
 A repeated measures, two-way ANOVA with a two (grammar: grammatical or ungrammatical) by two (sense: sensical or nonsensical) factorial design was performed to compare the main effects of grammar and sensible meaning on the strength of the ITPC at target frequencies across conditions. The TukeyHSD post-hoc test was used to compare the strength of the ITPC responses at different frequencies of interest (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz) across each of the four conditions for all participants. p values of less than 0.05 indicate a statistically significant result.
 
 
 \section*{Results}
 
-Three significant peaks in the strength of the ITPC were observed in the EEG response at the sentential (1/1.28 Hz), phrasal (2/1.28 Hz) and syllabic (4/1.28 Hz) rates while subjects listened to four word sentences (Figure 3). These three peaks were significant in all of the four sentence conditions, which were 1) Grammatically correct and semantically well-formed sentences composed of a noun phrase and a verb phrase, 2) Grammatically correct sentences composed of a noun phrase and a verb phrase but with meaningless semantic information, 3) Grammatically incorrect sentences that were made from reordering the semantically related words in condition 1 and 4) Grammatically incorrect sentences that were made from reordering the semantically unrelated words in condition 2, except for the peak at the sentential rate (1/1.28 Hz) in condition 1. In addition there is a statistically significant peak at 3/1.28 Hz in three out of the four conditions, which is likely due to be a resonance of the 1/1.28 Hz peak.
+Three significant peaks in the strength of the ITPC were observed in the EEG response at the sentential (1/1.28 Hz), phrasal (2/1.28 Hz) and syllabic (4/1.28 Hz) rates while subjects listened to four word sentences (Figure 3). These three peaks were significant in all of the four sentence conditions except for the peak at the sentential rate (1/1.28 Hz) in condition \textbf{GS}. In addition there is a statistically significant peak at 3/1.28 Hz in three out of the four conditions, which is likely due to be a resonance of the 1/1.28 Hz peak.
 
 \begin{figure}[tbhp]
 \includegraphics[width=\linewidth]{Grand_average_ITPC_per_condition_Grand_Average_ITPC_stats.png}
-\caption{\textbf{The spectrum of inter trial phase coherence in the EEG response to sentences from each of the four conditions.} These figures show the grand average over all participants and electrodes to each of the four conditions (\textbf{(A)}; Condition 1, correct grammar and meaningful semantics; \textbf{(B)}; Condition 2, correct grammar but lacking meaningful semantics; \textbf{(C)}; Condition 3, incorrect grammar but semantically related words; \textbf{(D)}; Condition 4, incorrect grammar and lacking any meaningful semantics). Stars represent
+\caption{\textbf{The spectrum of inter trial phase coherence in the EEG response to sentences from each of the four conditions.} These figures show the grand average over all participants and electrodes to each of the four condition. Stars represent
 statistical significance *= p$<$0.05, **= p$<$0.005, ***= p$<$0.0005.}
 \label{Fig1}
 \end{figure}
@@ -805,11 +471,20 @@ At the syllabic rate there was a significant main effect of grammar (Figure 4C).
 
 % now talk about pair wise comparisons across 4 conditions
 
-The ITPC response at both the sentential and syllabic rate was similar across all of the four conditions (Figure 5A, 5C). We next compared the strength of the ITPC at the rate of phrase presentation between each of the four experimental conditions (Figure 5B). The strength of the ITPC at the phrasal rate is statistically significantly greater in response to grammatically well-formed, semantically sensible sentences in  condition 1 (mean = 0.0712 +/- 0.0309) compared to both condition 2 (p = 0.0328, mean = 0.0507 +/- 0.0242) and condition 4 (p = 0.0015, mean = 0.0411 +/- 0.0205). No other comparisons were significant.
+The ITPC response at both the sentential and syllabic rate was similar across all of the four conditions (Figure 5A, 5C). We next compared the strength of the ITPC at the rate of phrase presentation between each of the four experimental conditions (Figure 5B). The strength of the ITPC at the phrasal rate is statistically significantly greater in response to grammatically well-formed, semantically sensible sentences in  condition \textbf{GS} (mean = 0.0712 +/- 0.0309) compared to both condition \textbf{GN} (p = 0.0328, mean = 0.0507 +/- 0.0242) and condition \textbf{UN} (p = 0.0015, mean = 0.0411 +/- 0.0205). No other comparisons were significant. Fig.~\ref{PhraseITPC} shows this comparison along with the participant-to-participant variation.
+
+\begin{figure}[tbhp]
+\includegraphics[width=\linewidth]{ITPC_peak_joined_for_participant_ordered_conditions_phrase_phrasal_rate.png}
+\caption{\textbf{ITPC strength at the phrasal rate for each subject during each condition.} Graph showing the strength of the ITPC at the phrasal rate for each subject during each of the four experimental conditions. Each blue line represents a single subject. The black line represents the average ITPC strength at the phrasal rate for each of the four conditions across subjects.}
+\label{PhraseITPC}
+\end{figure}
+
+
+
 
 \begin{figure}[tbhp]
 %\includegraphics[width=\linewidth]{Figure3.eps}
-\includegraphics[width=\linewidth]{ITPC_peaks_per_condition.png}}
+\includegraphics[width=\linewidth]{ITPC_peaks_per_condition.png}
 \caption{\textbf{Comparing ITPC values at frequencies of interest
     across conditions} Graphs showing average ITPC values at the
   sentential, phrasal and syllabic rates (\textbf{(A-C)}; 1/1.28 Hz,
@@ -821,7 +496,7 @@ The ITPC response at both the sentential and syllabic rate was similar across al
   respectively. The whiskers extend to the most extreme data points
   not considered outliers, and the outliers are plotted individually
   using the '+' symbol. Stars represent statistical significance *=
-  p<0.05, **= p<0.005, ***= p<0.0005. The ITPC at the phrasal rate was
+  p\<0.05, **= p\<0.005, ***= p\<0.0005. The ITPC at the phrasal rate was
   significantly greater when subjects listened to grammatically
   correct, semantically plausible sentences (condition 1) than when the same
   subjects listened to sentences that were either formed from grammatical,
@@ -833,59 +508,21 @@ The ITPC response at both the sentential and syllabic rate was similar across al
 
 % outline variability in participant results
 
-The majority of participants displayed similar results to those outlined above in the grand average, but there was some variability in response at the single subject level. In condition 1, statistically significant peaks at the sentential, phrasal and syllabic frequencies are observed in 11/18,
-14/18 and 17/18 participants respectively. In
-condition 2, statistically significant peaks at the sentential,
-phrasal and syllabic frequencies are observed in 13/18, 11/18 and
-18/18 participants respectively. In condition 3,
-statistically significant peaks at the sentential, phrasal and
-syllabic frequencies are observed in 11/18, 12/18 and 18/18
-participants respectively. In condition 4,
-statistically significant peaks at the sentential, phrasal and
-syllabic frequencies are observed in 14/18, 5/18 and 17/18
-participants respectively. For a graphical display of thee results see Supplementary Material, Figure n.
 
 % add graph for individual subject ITPC peaks in each condition at phrase rate 
 
-\begin{figure}[tbhp]
-\includegraphics[width=\linewidth]{ITPC_peak_joined_for_participant_ordered_conditions_phrase_phrasal_rate.png}
-\caption{\textbf{ITPC strength at the phrasal rate for each subject during each condition.} Graph showing the strength of the ITPC at the phrasal rate for each subject during each of the four experimental conditions. Each blue line represents a single subject. The black line represents the average ITPC strength at the phrasal rate for each of the four conditions across subjects.}
-\label{PhraseITPC}
-\end{figure}
 
 
-%% move this figure to supplementary material? AB 19/09/2018
-%\begin{figure}[tbhp]
-%\includegraphics[width=\linewidth]{BoxPlots_per_subject.eps}
-%\caption{\textbf{Individual EEG responses to grammatical and ungrammatical sensical and nonsensical sentences.} Graphs showing average ITPC values at each of the frequencies of interest (1/1.28 Hz, 1/0.64 Hz, 1/0.32 Hz, \textbf{(i-iii)}, respectively) for each of the four conditions tested \textbf{(A-D)}. On the box plots the central red line indicates the median ITPC value across all electrodes for the participant, the bottom and top edges of the box indicate the 25th and 75th percentiles of the ITPC values across all electrodes. The whiskers extend to the most extreme data points not considered outliers, and the outliers are plotted individually using the '+' symbol. Stars represent statistical significance *= p$<$0.05, **= p$<$0.005, ***= p$<$0.0005.}
-%\label{Fig2}
-%\end{figure}
 
 
-% The below paragraph aimed to tentatively test the possibility of the effects of attention (as measured by alpha power)
 
-There was a statistically significant positive correlation between the
-evoked power in the EEG response at the phrasal rate and the maximum
-evoked power within the alpha frequency band (7.5 - 12.5 Hz) for each
-of the four conditions (Condition 1; r=0.8316, p<0.005, Condition 2;
-r=0.8567, p<0.005, Condition 3; r=0.6709, p=0.0032, Condition 4;
-r=0.9774, p<0.005 (n=18 participants)), which seems to depend on the
-power data from two participants. If these are removed then there is
-no significant correlation between the power at the phrasal rate and
-maximum power in the alpha frequency band (7.5 - 12.5 Hz) for each of
-the four conditions (Condition 1; r=0.2493, p=0.3346, Condition 2;
-r=0.3921, p=0.1196, Condition 3; r=0.4163, p=0.0965, Condition 4;
-r=0.3633, p=0.1518 (n=16 participants)). We found no statistically
-significant correlation between ITPC values at the phrasal rate and
-the values at the sentential rate across n=18 participants for any of
-the four conditions (Condition 1; r=-0.1868, p=0.4581, Condition 2;
-r=-0.0204, p=0.9359, Condition 3; r=0.359, p=0.1434, Condition 4;
-r=-0.0397, p=0.8758).
- 
 % add in a sentence to state effect of time and condition order and phase
-No effect of time was observed in the present study (see Supplementary Material). The ITPC graphs were similar when comparing trials that occurred at the beginning of each experiment compared with trials that occurred later, and when comparing the responses to sentences that were presented during the first half of each trial with the last half of each trial. In a number of cases where conditions three and four were presented to participants before either conditions one or two, the peak in ITPC at the 1/1.28 Hz rate was still evident. Therefore, the peak observed in ITPC at the sentential rate to presentation conditions three and four were not merely the result of the expectancy of four word sentences given by the prior presentation of sentences from conditions one or two.
+No effect of time was observed in the present study (see Supplementary Material). The ITPC graphs were similar when comparing trials that occurred at the beginning of each experiment compared with trials that occurred later, and when comparing the responses to sentences that were presented during the first half of each trial with the last half of each trial. In a number of cases where conditions \textbf{US} and \textbf{UN} were presented to participants before either conditions \textbf{GS} or \textbf{GN}, the peak in ITPC at the 1/1.28 Hz rate was still evident. Therefore, the peak observed in ITPC at the sentential rate to presentation in the ungrammatical conditions were not the result of the expectancy of four word sentences given by the prior presentation of sentences from the grammatical conditions. 
 
-We found no variation in the phase of the
+
+
+
+
 
 
 \section*{Discussion}
@@ -967,7 +604,7 @@ syntactic category information.
 %% No observable change
 %% Make a nice figure to illustrate this
 %% A  2018-08-22
-In experimental conditions three and four, the four-word sentences are
+In experimental conditions \textbf{US} and \textbf{UN}, the four-word sentences are
 ungrammatical and do not consitute well-formed sentences. The only
 information that occurs at the sentential rate is therefore the
 repetition of words that share a common syntactic category at the same
@@ -1534,6 +1171,17 @@ During the experiment each participant was presented with 120 trials; 30 trials 
 \label{ITPC_Distribution}
 \end{figure}
 
+The majority of participants displayed similar results to those outlined above in the grand average, but there was some variability in response at the single subject level. In condition 1, statistically significant peaks at the sentential, phrasal and syllabic frequencies are observed in 11/18,
+14/18 and 17/18 participants respectively. In
+condition 2, statistically significant peaks at the sentential,
+phrasal and syllabic frequencies are observed in 13/18, 11/18 and
+18/18 participants respectively. In condition 3,
+statistically significant peaks at the sentential, phrasal and
+syllabic frequencies are observed in 11/18, 12/18 and 18/18
+participants respectively. In condition 4,
+statistically significant peaks at the sentential, phrasal and
+syllabic frequencies are observed in 14/18, 5/18 and 17/18
+participants respectively.
 
 \end{document}
 
