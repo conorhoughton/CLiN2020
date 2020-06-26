@@ -282,41 +282,72 @@ participants.
 
 \subsection*{EEG Recording}
 
-EEG was continuously recorded with a 32-channel EEG system (),
-digitized at a sampling rate of 1,000 Hz (bandpass filter = 0.01–400
-Hz) and referenced to the vertex (Cz), as in \cite{DingEtAl2017}. The
-impedance of the electrodes was kept below 5kohms. Eyeblink artifacts were removed using ICA: an independent component
-was removed if in its topography the mean power over the most frontal
-three channels was more than twenty times stronger than the mean power
-over all other channels. The signals of interest are in the
-low-frequency region, at 1/1.28, 2/1.28, and 4/1.28 Hz and so the EEG
-signal was lowpass filtered to 25 Hz. Data were referenced offline to
-a common average reference and the responses to each individual trial
-were epoched. 
+EEG was continuously recorded with a 32-channel EEG system fitted on a
+standard electrode layour elasticised cap using a BrainAmp DC
+amplifier (Brain Products GmbH). Signals were digitized at a sampling
+rate of 1,000 Hz (bandpass filter = 0.01–400 Hz) and referenced to the
+vertex (Cz), as in \cite{DingEtAl2017}. The impedance of the
+electrodes was kept below 5kohms. Eyeblink artifacts were removed
+using ICA: an independent component was removed if in its topography
+the mean power over the most frontal three channels was more than
+twenty times stronger than the mean power over all other channels. The
+signals of interest are in the low-frequency region, at 1/1.28,
+2/1.28, and 4/1.28 Hz and so the EEG signal was lowpass filtered to 25
+Hz. Data were referenced offline to a common average reference and the
+responses to each individual trial were epoched.
 
 \subsection*{Data analysis}
 
-Upon sound onset there is a transient EEG response and
-so the first sentence in each trial was removed from the data. This
-meant that the overall trial length was 15.36 seconds (1.28 seconds x
-12 sentences). The remaining EEG signal was converted into the frequency domain using the discrete
-fourier transform with a frequency resolution of 0.065 Hz, that is, 1/15.36 Hz. The complex-valued Fourier coefficient of the trail $k$, $X_k(f)$, is then used to calculate the inter-trial phase coherence and the evoked power. 
+Upon sound onset there is a transient EEG response and so the first
+sentence in each trial was removed from the data. This meant that the
+overall trial length was 15.36 seconds (1.28 seconds x 12
+sentences). The remaining EEG signal was converted into the frequency
+domain using the discrete fourier transform with a frequency
+resolution of 0.065 Hz, that is, 1/15.36 Hz. The complex-valued
+Fourier coefficient of the trail $k$, $X_k(f)$, is then used to
+calculate the inter-trial phase coherence .
 
 The inter-trial phase coherence is defined as
 \begin{equation}
 \label{eq:itpc}
 R(f)=\frac{1}{K}\left[\left(\sum_k{\cos{\theta_k(f)}}\right)^2+\left(\sum_k{\sin{\theta_k(f)}}\right)^2\right]
 \end{equation}
-where $\theta_k(f)$ is the phase angle of each complex-valued Fourier coefficient $X_k(f)$ and $K$ is the total number of trials. As with the evoked power, it measures the time-locked response; because it uses only the phase-angle rather than the whole response, it does not show the same $1/f$ noise that is present in the evoked power. As such, it is a convenient measure of EEG response to a stimulus with fixed frequency.
+where $\theta_k(f)$ is the phase angle of each complex-valued Fourier
+coefficient $X_k(f)$ and $K$ is the total number of trials. As with
+the evoked power, it measures the time-locked response; because it
+uses only the phase-angle rather than the whole response, it does not
+show the same $1/f$ noise that is present in the evoked power. As
+such, it is a convenient measure of EEG response to a stimulus with
+fixed frequency.
 
-As in \cite{DingEtAl2016} a one-tailed paired t-test was used to test whether the inter-trial phase coherence value in a given frequency bin was significantly stronger than the average of the neighboring four frequency bins, two bins on either side. This was applied to all frequency bins below 5 Hz and a FDR correction for multiple comparisons was applied. 
+As in \cite{DingEtAl2016} a one-tailed paired t-test was used to test
+whether the inter-trial phase coherence value in a given frequency bin
+was significantly stronger than the average of the neighboring four
+frequency bins, two bins on either side. This was applied to all
+frequency bins below 5 Hz and a FDR correction for multiple
+comparisons was applied.
 
-A repeated measures, two-way ANOVA with a two (grammar: grammatical or ungrammatical) by two (sense: sensical or nonsensical) factorial design was performed to compare the main effects of grammar and sensible meaning on the strength of the ITPC at target frequencies across conditions. The TukeyHSD post-hoc test was used to compare the strength of the ITPC responses at different frequencies of interest (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz) across each of the four conditions for all participants. p values of less than 0.05 indicate a statistically significant result.
+A repeated measures, two-way ANOVA with a two (grammar: grammatical or
+ungrammatical) by two (sense: sensical or nonsensical) factorial
+design was performed to compare the main effects of grammar and
+sensible meaning on the strength of the ITPC at target frequencies
+across conditions. The TukeyHSD post-hoc test was used to compare the
+strength of the ITPC responses at different frequencies of interest
+(1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz) across each of the four
+conditions for all participants. $p$ values of less than 0.05 indicate
+a statistically significant result.
 
 
 \section*{Results}
 
-Three significant peaks in the strength of the ITPC were observed in the EEG response at the sentential (1/1.28 Hz), phrasal (2/1.28 Hz) and syllabic (4/1.28 Hz) rates while subjects listened to four word sentences (Fig.~\ref{Fig1}). These three peaks were significant in all of the four sentence conditions except for the peak at the sentential rate (1/1.28 Hz) in condition \textbf{GS}. In addition there is a statistically significant peak at 3/1.28 Hz in three out of the four conditions, which is likely due to be a resonance of the 1/1.28 Hz peak.
+Three significant peaks in the strength of the ITPC were observed in
+the EEG response at the sentential (1/1.28 Hz), phrasal (2/1.28 Hz)
+and syllabic (4/1.28 Hz) rates while subjects listened to four word
+sentences (Fig.~\ref{Fig1}). These three peaks were significant in all
+of the four sentence conditions except for the peak at the sentential
+rate (1/1.28 Hz) in condition GS. In addition there is a
+statistically significant peak at 3/1.28 Hz in three out of the four
+conditions.
 
 \begin{figure}[tbp]
 \includegraphics[width=\linewidth]{ITPC_by_condition.png}
@@ -330,30 +361,22 @@ Three significant peaks in the strength of the ITPC were observed in the EEG res
 \label{Fig1}
 \end{figure}
 
-We first analyzed whether there were significant main effects of
-grammar and meaningful semantics on the strength of the inter-trial
-phase coherence at each of the three frequencies of interest in the
-EEG response (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz),
+We analyzed whether there were significant main effects of grammar and
+meaningful semantics on the strength of the inter-trial phase
+coherence at each of the three frequencies of interest in the EEG
+response (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz),
 Fig.~\ref{MainEffects}. At the rate of phrase presentation (2/1.28 Hz)
 there was a significant main effect (Fig.~\ref{MainEffects}B) of both
-grammar (p=0.0096, F=8.4985, n=18 subjects, mean(grammatically
-correct) = 0.0609 $\pm$ 0.0293, mean(grammatically incorrect) = 0.0498
-$\pm$ 0.0291) and semantics (p=0.0025, F=12.5283, n=18 subjects,
-mean(semantically related words) = 0.0648 $\pm$ 0.0328,
-mean(semantically unrelated words) = 0.0459 $\pm$ 0.0226). Both
-correct grammar and sensible semantics were associated with a
-significantly greater peak in ITPC strength at the phrasal rate than
-sentences with incorrect grammar or semantically unrelated words. No
-interaction effects were observed (p=0.7530).
+grammar and semantics: both correct grammar and sensible semantics
+were associated with a significantly greater peak in ITPC strength at
+the phrasal rate than sentences with incorrect grammar or semantically
+unrelated words. No interaction effects were observed.
 
 At the syllabic rate there was a significant main effect of grammar
 (Fig.~\ref{MainEffects}C). The ITPC peak at the syllabic rate was
 significantly greater when participants listened to grammatically
 correct sentences compared to when the same participants listened to
-grammatically incorrect sentences (p=0.0016, F=14.0673, n=18 Subjects
-(mean ITPC at 1/1.28 Hz in the grammatically correct conditions =
-0.2402 $\pm$ 0.1434, mean ITPC at 1/1.28 Hz in the grammatically
-incorrect conditions = 0.2096 $\pm$ 0.1381)). No significant main
+grammatically incorrect sentences. No significant main
 effect of semantics was observed (Fig.~\ref{MainEffects}C). At the
 rate of sentence presentation no significant main effects on the
 strength of ITPC were observed (Fig.~\ref{MainEffects}A).
@@ -367,12 +390,17 @@ strength of ITPC were observed (Fig.~\ref{MainEffects}A).
   The main effects of grammar and sensible semantics on the strength
   of the ITPC at each of the three target frequencies of interest
   (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz). A statistically significant
-  effect of grammar was observed at both the phrasal and sentential
-  rate, with a greater ITPC peak for grammatically well-formed
-  sentences. A main effect of semantics was also observed at the
-  phrasal rate. No interactions between grammar and semantics are
-  present. Statistical significance *= p$<$0.05, **= p$<$0.005, ***=
-  p$<$0.0005.}
+  effect of grammar was observed at both the syllabic rate, with a
+  greater ITPC peak for grammatically well-formed sentences
+  ($p=0.0016$, $F=14.0673$, $n=18$ subjects, $\mu(\mathrm{G}) = 0.2402
+  \pm 0.1434$, $\mu(\mathrm{U}) = 0.2096 \pm 0.1381$).  A main effect
+  of grammar and semantics was also observed at the phrasal rate
+  (grammar: $p=0.0016$, $F=14.0673$, $n=18$ subjects $\mu(\mathrm{G})= 0.2402
+  \pm 0.1434$, $\mu(\mathrm{U})= 0.2096 \pm 0.1381$; semantics: $p=0.0025$,
+  $F=12.5283$, $n=18$ subjects, $\mu(\mathrm{S}) = 0.0648 \pm
+  0.0328$, $\mu(\mathrm{N}) = 0.0459 \pm 0.0226$) No interactions
+  between grammar and semantics are present ($p=0.7530$). Statistical
+  significance *: $p<0.05$, **:$p<0.005$.  }
 \label{MainEffects}
 \end{figure}
 
@@ -382,11 +410,9 @@ across all of the four conditions (Figure~\ref{ITPC_peaks}A,
 rate of phrase presentation between each of the four experimental
 conditions (Figure ~\ref{ITPC_peaks}B). The strength of the ITPC at
 the phrasal rate is significantly greater in response to grammatically
-well-formed, semantically sensible sentences in condition \textbf{GS}
-(mean = 0.0712 +/- 0.0309) compared to both condition \textbf{GN} (p =
-0.0328, mean = 0.0507 +/- 0.0242) and condition \textbf{UN} (p =
-0.0015, mean = 0.0411 +/- 0.0205). No other comparisons were
-significant. 
+well-formed, semantically sensible sentences in condition GS compared
+to both condition GN and condition UN. No other comparisons were
+significant.
 
 \begin{figure}[tbp]
 %\includegraphics[width=\linewidth]{Figure3.eps}
@@ -395,15 +421,17 @@ significant.
     across conditions} Graphs showing average ITPC values at the
   sentential, phrasal and syllabic rates (\textbf{(A-C)}; 1/1.28 Hz,
   1/0.64 Hz, 1/0.32 Hz, respectively) for each of the four conditions
-  tested. These are numbered along the $x$-axis as 1 - GS, 2 - GN, 3 - US and 4 - UN.
-  On the box plots the the central red line indicates the
-  median ITPC value for each condition at each of the target
+  tested. These are numbered along the $x$-axis as 1 - GS, 2 - GN, 3 -
+  US and 4 - UN.  On the box plots the the central red line indicates
+  the median ITPC value for each condition at each of the target
   frequencies \textbf{(A-C)}, the bottom and top edges of the box
   indicate the 25th and 75th percentiles of the ITPC values,
   respectively. The whiskers extend to the most extreme data points
   not considered outliers, and the outliers are plotted individually
-  using the '+' symbol. Stars represent statistical significance *=
-  $p<0.05$, **= $p<0.005$, ***= $p<0.0005$.}
+  using the '+' symbol. Statistical significance is represented by
+  *:$p<0.05$, **:$p<0.005$, ***:$p<0.0005$. At the phrasal rate the GS condition ($\mu(\mathrm{GS}) = 0.0712 +/- 0.0309$) is significantly higher than GN ($p =
+0.0328$, $\mu(\mathrm{GN}) = 0.0507 \pm 0.0242$) and UN  ($p =
+0.0015$, $\mu(\mathrm{UN}) = 0.0411 \pm 0.0205$).}
 \label{ITPC_peaks}
 \end{figure}
 
