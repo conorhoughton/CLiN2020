@@ -35,7 +35,7 @@
 \author{Amelia Burroughs$^*$ \email{amelia.burroughs@bristol.ac.uk}\\
 {\normalsize \bf Nina Kazanina}$^{**}$ \email{nina.kazanina@bristol.ac.uk}\\
 {\normalsize \bf Conor Houghton}$^*$ \email{conor.houghton@bristol.ac.uk}
-\AND \addr{$^*$Computational Neuroscience Unit, School of Computer Science, Electrical and Electronic Engineering, and Engineering Maths, University of Bristol, UK}
+\AND \addr{$^*$Department of Computer Science, University of Bristol, UK}
 \AND \addr{$^{**}$School of Psychological Science, University of Bristol, UK} }
 
 
@@ -332,10 +332,10 @@ meant that the overall trial length was 15.36 seconds (1.28 seconds x
 12 sentences). The remaining EEG signal was converted into the frequency domain using the discrete
 fourier transform with a frequency resolution of 0.065 Hz, that is, 1/15.36 Hz. The complex-valued Fourier coefficient of the trail $k$, $X_k(f)$, is then used to calculate the inter-trial phase coherence and the evoked power. 
 
-The inter-trial phase coherence is defined in Eq.~\ref{eq:itpc}
+The inter-trial phase coherence is defined as
 \begin{equation}
 \label{eq:itpc}
-R(f)=\frac{1}{K}\left[\left(\sum_k{\cos{\theta_k(f)}}\right)^2/K+\left(\sum_k{\sin{\theta_k(f)}}\right)^2\right]
+R(f)=\frac{1}{K}\left[\left(\sum_k{\cos{\theta_k(f)}}\right)^2+\left(\sum_k{\sin{\theta_k(f)}}\right)^2\right]
 \end{equation}
 where $\theta_k(f)$ is the phase angle of each complex-valued Fourier coefficient $X_k(f)$ and $K$ is the total number of trials. As with the evoked power, it measures the time-locked response; because it uses only the phase-angle rather than the whole response, it does not show the same $1/f$ noise that is present in the evoked power. As such, it is a convenient measure of EEG response to a stimulus with fixed frequency.
 
@@ -348,10 +348,15 @@ A repeated measures, two-way ANOVA with a two (grammar: grammatical or ungrammat
 
 Three significant peaks in the strength of the ITPC were observed in the EEG response at the sentential (1/1.28 Hz), phrasal (2/1.28 Hz) and syllabic (4/1.28 Hz) rates while subjects listened to four word sentences (Fig.~\ref{Fig1}). These three peaks were significant in all of the four sentence conditions except for the peak at the sentential rate (1/1.28 Hz) in condition \textbf{GS}. In addition there is a statistically significant peak at 3/1.28 Hz in three out of the four conditions, which is likely due to be a resonance of the 1/1.28 Hz peak.
 
-\begin{figure}[tbhp]
-\includegraphics[width=\linewidth]{Grand_average_ITPC_per_condition_Grand_Average_ITPC_stats.png}
-\caption{\textbf{The spectrum of inter trial phase coherence in the EEG response to sentences from each of the four conditions.} These figures show the grand average over all participants and electrodes to each of the four condition. Stars represent
-statistical significance *= p$<$0.05, **= p$<$0.005, ***= p$<$0.0005.}
+\begin{figure}[tbp]
+\includegraphics[width=\linewidth]{ITPC_by_condition.png}
+\caption{\textbf{The spectrum of inter trial phase coherence in the
+    EEG response to sentences from each of the four conditions.} These
+  figures show the grand average of ITPC over all participants and
+  electrodes to each of the four condition; the grand average is in
+  black, the blue lines are averages over all electrodes for the 18
+  individual participants. Stars represent statistical significance of
+  $p<0.05$.}
 \label{Fig1}
 \end{figure}
 
@@ -362,7 +367,7 @@ At the syllabic rate there was a significant main effect of grammar (Fig.~\ref{M
 
 %% include figure here detailing main effects results from repeated measures 2 way ANOVA.
 
-\begin{figure}[tbhp]
+\begin{figure}[tbp]
 \includegraphics[width=\linewidth]{BoxPlots_main_effects.png}
 \caption{\textbf{Main effects from the repeated measures 2-way ANOVA.} The main effects of grammar and sensible semantics on the strength of the ITPC at each of the three target frequencies of interest (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz). A statistically significant effect of grammar was observed at both the phrasal and sentential rate, with a greater ITPC peak for grammatically well-formed sentences. A main effect of semantics was also observed at the phrasal rate. No interactions between grammar and semantics are present. Statistical significance *= p$<$0.05, **= p$<$0.005, ***= p$<$0.0005.}
 \label{MainEffects}
@@ -370,35 +375,25 @@ At the syllabic rate there was a significant main effect of grammar (Fig.~\ref{M
 
 The ITPC response at both the sentential and syllabic rate was similar across all of the four conditions (Figure 5A, 5C). We next compared the strength of the ITPC at the rate of phrase presentation between each of the four experimental conditions (Figure 5B). The strength of the ITPC at the phrasal rate is statistically significantly greater in response to grammatically well-formed, semantically sensible sentences in  condition \textbf{GS} (mean = 0.0712 +/- 0.0309) compared to both condition \textbf{GN} (p = 0.0328, mean = 0.0507 +/- 0.0242) and condition \textbf{UN} (p = 0.0015, mean = 0.0411 +/- 0.0205). No other comparisons were significant. Fig.~\ref{PhraseITPC} shows this comparison along with the participant-to-participant variation.
 
-\begin{figure}[tbhp]
-\includegraphics[width=\linewidth]{ITPC_peak_joined_for_participant_ordered_conditions_phrase_phrasal_rate.png}
-\caption{\textbf{ITPC strength at the phrasal rate for each subject during each condition.} Graph showing the strength of the ITPC at the phrasal rate for each subject during each of the four experimental conditions. Each blue line represents a single subject. The black line represents the average ITPC strength at the phrasal rate for each of the four conditions across subjects.}
-\label{PhraseITPC}
-\end{figure}
 
 
 
-
-\begin{figure}[tbhp]
+\begin{figure}[tbp]
 %\includegraphics[width=\linewidth]{Figure3.eps}
-\includegraphics[width=\linewidth]{ITPC_peaks_per_condition.png}
+\includegraphics[width=\linewidth]{ITPC_peaks.png}
 \caption{\textbf{Comparing ITPC values at frequencies of interest
     across conditions} Graphs showing average ITPC values at the
   sentential, phrasal and syllabic rates (\textbf{(A-C)}; 1/1.28 Hz,
   1/0.64 Hz, 1/0.32 Hz, respectively) for each of the four conditions
-  tested. On the box plots the the central red line indicates the
+  tested. These are numbered along the $x$-axis as 1 - GS, 2 - GN, 3 - US and 4 - UN.
+  On the box plots the the central red line indicates the
   median ITPC value for each condition at each of the target
   frequencies \textbf{(A-C)}, the bottom and top edges of the box
   indicate the 25th and 75th percentiles of the ITPC values,
   respectively. The whiskers extend to the most extreme data points
   not considered outliers, and the outliers are plotted individually
   using the '+' symbol. Stars represent statistical significance *=
-  p\<0.05, **= p\<0.005, ***= p\<0.0005. The ITPC at the phrasal rate was
-  significantly greater when subjects listened to grammatically
-  correct, semantically plausible sentences (condition 1) than when the same
-  subjects listened to sentences that were either formed from grammatical,
-  semantically unrelated words (condition 2) or from ungrammatical,
-  semantically unrelated words (condition 4).}
+  $p<0.05$, **= $p<0.005$, ***= $p<0.0005$.}
 \label{ITPC_peaks}
 \end{figure}
 
@@ -880,206 +875,6 @@ Topographic electrode responses
 
 \bibliographystyle{clin}         
 \bibliography{Sentences}
-
-
-
-
-
-%% \begin{thebibliography}{10}
-
-%% \bibitem{bib1}
-%% Conant GC, Wolfe KH.
-%% \newblock {{T}ime Course of Frequency Effects in Spoken-Word Recognition: Evidence from Eye Movements}.
-%% \newblock Cognitive Psychology 42, 317–367 (2001)
-
-%% \bibitem{bib2}
-%% Jurafsky D.
-%% \newblock Probabilistic Modeling in Psycholinguistics: Linguistic Comprehension and Production
-%% \newblock Prob. Linguist., 30 (2002), pp. 1-50
-
-%% \bibitem{bib3}
-%% Lee Osterhout, Albert Kim and Gina Kuperberg
-%% \newblock {The Neurobiology of Sentence Comprehension }.
-%% \newblock To appear in M. Spivey, M. Joannisse, K. McRae (Eds), The Cambridge Handbook of Psycholinguistics. Cambridge: Cambridge University Press (2006)
-
-%% \bibitem{bib4}
-%% Boersma, Paul and Weenink, David (2018).
-%% \newblock {Praat: doing phonetics by computer [Computer program].}
-%% \newblock Version 6.0.40, retrieved 11 May 2018 from http://www.praat.org/
-
-%% \bibitem{bib5}
-%% Marcus Kiefer
-%% \newblock Perceptual and semantic sources of category-specific effects: Event-related potentials during picture and word categorization. 
-%% \newblock Memory and Cognition January 2001, Volume 29, Issue 1, pp 100–116
-
-
-%% \bibitem{bib6}
-%% Friedemann Pulvermüller Bettina Mohr Hans Schleichert
-%% \newblock Semantic or lexico-syntactic factors: what determines word-class specific activity in the human brain? 1999a
-%% \newblock Neuroscience Letters Volume 275, Issue 2, 12 November 1999, Pages 81-84
-
-
-%% \bibitem{bib7}
-%% Pulvermüller F1, Lutzenberger W, Preissl H.
-%% \newblock Nouns and Verbs in the Intact Brain: Evidence from Event-related Potentials and High-frequency Cortical Responses 1999b
-%% \newblock Cereb Cortex. 1999 Jul-Aug;9(5):497-506.
-
-
-%% \end{thebibliography}
-
-
-\section*{Supplementary}
-
-\begin{quote}
-In this experiment, a number of sentence pairs will appear in the
-sentence of the screen. You will need to compare them, and choose
-which sentence sounds more \lq{}\textbf{normal}\rq{} in everyday
-speech. Use your intuition to determine which sentences make more
-sense and would sound more normal being spoken. If you judge two
-sentences to be equally weird / normal sounding, please also use your
-intuition to pick between them. If you think the first sentence is
-more normal, press the \textbf{A} key. If you think the second
-sentence is more normal, press the \textbf{D} key. If either of the
-sentences contains the word \lq{}\textbf{fish}\rq{}, press the
-\textbf{F} key. All sentences are generated randomly. Any sentences
-with dark, humerous, or offensive messages are purely coincidental. If
-any of these disturb you, please discontinue the experiment.
-\end{quote}
-
-% maybe remove this 
-\begin{figure}[tbhp]
-%\includegraphics[width=\linewidth]{.jpg}
-\caption{\textbf{Statistically significant positive correlation between ITPC at the phrasal rate and mean evoked power in the alpha frequency band.} Evoked power in the alpha frequency band correlates with ITPC at the phrasal (r= ,p=), but not at either the syllabic (r=, p=) or sentential (r=, p=) rates.}
-\label{Fig4}
-\end{figure}
-
-
-\subsection{Material presented to the subjects}
-
-\subsubsection{Instructions}
-
-Instructions of the experiment were presented to the subjects visually on a computer monitor for them to read. These instructions are described below:
-
-"Hello and welcome!
-
-This experiment is made up of 12 blocks.
-Each block consists of ten trials.
-In each trial you will hear a series of 13 sentences.
-
-Not all of the sentences will make sense.
-After each block of sentences you will be asked to rate how much sense
-the sentences made to you on average during that particular block.
-
-Please try to sit still while you are listening to the sentences.
-There will be a few short breaks during the experiment.
-
-Press ENTER to continue and we'll show you some example sentences.
-
-At the end of each block of sentences you will be asked to rate how much
-sense the sentences made to you on a scale of 1 to 5.
-1 represents no sense and 5 represents perfect sense.
-
-For example,
-
-'Old hands hold books'    5 
-
-'Sad bikes kick words'    3   
-
-'Win trees legs fun'      1
-
-When you are ready, press ENTER to continue.
-
-We are now ready to start the experiment.
-
-Remember, you need to rate the sentences in terms of
-how much sense they make to you on average.
-1 means no sense and 5 is lots of sense.
-
-Please press ENTER when you are ready to continue."
-
-\subsubsection{Experiment Structure}
-
-During the experiment each participant was presented with 120 trials; 30 trials from each of the four conditions. Each trial consisted of 13 four word sentences played back to back with no acoustic gap between the sentences. The 13 sentences making up a trial were randomly selected from a larger pool of 20 possible sentences. Precautions were made to prevent repetition of sentences within the same trial. The 30 trials from each condition were split into six blocks so that each block contained five trials from the same condition. Within each block, trials were separated by a rest period of 1200 ms. There were a total of 24 blocks. After each block participants were asked to rate the sentences in the block in terms of how much sense they made to them on average on a scale of 1 to 5 using a button press. There was no time limit for making this decision. After the decision had been made the participants got a break of 20 seconds before the next block began. There was a longer break at the half way point of the experiment that lasted for one minute and a half. 
-
-\subsubsection{Sentence Material}
-
-\subsubsubsection{\bf{Condition 1 sentences}}
-
-1477.42763496	young kings read books
-1158.23873257	hot rats love birds 
-1313.06869998	sad kings sell things
-1415.58243901	old hands hold books
-1188.13132543	bad kings burn cows 
-1336.86107312	huge trams scare boys
-1302.77706299	soft hands hold wives 
-1190.57353423	tall dogs wear things
-1379.39139814	fun hands take things 
-1307.49506881	kind men read books
-1223.98820098	fast girls kick birds 
-1225.19089732	cold girls wash caps
-1170.96513398	small cars win wives 
-1346.1657286	warm girls like mice
-1173.39977704	smart dogs take books 
-1525.20117687	loud dogs hunt cats 
-1284.69680614	slow men drag cows 
-1135.459118	large frogs sing words
-1128.76447109	rich stars drive kids
-1238.4072431	good rats like boys
-
-\subsubsubsection{\bf{Condition 2 sentences}}
-
-873.349171792	cold toys bite toes
-945.133249009	warm trams kick boys
-952.578059314	large frogs win words 
-788.332063381	slow toys drink toes 
-975.242280117	huge men sing legs 
-905.076087903	bad bikes wash kids
-953.148684168	fun trees hunt wives 
-908.639427673	smart stars drag cows
-881.51333052	old trees read legs 
-916.482544802	good bikes like mice
-933.543235351	young rats make wives
-965.179862446	fast hands drive books 
-888.322104172	soft cars scare books 
-696.075482348	loud trams wear days 
-733.990192044	hot cars send days 
-876.852304977	sad skis burn days 
-983.398902431	tall bikes love cats
-935.493159671	rich toys take mice
-994.236124046	small rats drive legs 
-907.119163475	kind skis make birds 
-
-\subsubsubsection{\bf{Condition 3 sentences}}
-
-\subsubsubsection{\bf{Condition 4 sentences}}
-
-
-% move this figure to supplementary material? AB 19/09/2018
-\begin{figure}[tbhp]
-\includegraphics[width=\linewidth]{BoxPlots_per_subject.eps}
-\caption{\textbf{Individual EEG responses to grammatical and ungrammatical sensical and nonsensical sentences.} Graphs showing average ITPC values at each of the frequencies of interest (1/1.28 Hz, 1/0.64 Hz, 1/0.32 Hz, \textbf{(i-iii)}, respectively) for each of the four conditions tested \textbf{(A-D)}. On the box plots the central red line indicates the median ITPC value across all electrodes for the participant, the bottom and top edges of the box indicate the 25th and 75th percentiles of the ITPC values across all electrodes. The whiskers extend to the most extreme data points not considered outliers, and the outliers are plotted individually using the '+' symbol. Stars represent statistical significance *= p$<$0.05, **= p$<$0.005, ***= p$<$0.0005.}
-\label{Fig2}
-\end{figure}
-
-% Add a figure for the distibution of ITPC values
-
-\begin{figure}[tbhp]
-\includegraphics[width=\linewidth]{ITPC_Distributions.png}
-\caption{\textbf{Distribution of ITPC values for each condition at each of the three target frequencies.} Histograms showing the distribution of ITPC values for all participants during each of the four conditions (1-4) at each of the frequencies of interest (sentential rate; 1/1.28 Hz, phrasal rate 2/1.28 Hz and syllabic rate 4/1.28 Hz).}
-\label{ITPC_Distribution}
-\end{figure}
-
-The majority of participants displayed similar results to those outlined above in the grand average, but there was some variability in response at the single subject level. In condition 1, statistically significant peaks at the sentential, phrasal and syllabic frequencies are observed in 11/18,
-14/18 and 17/18 participants respectively. In
-condition 2, statistically significant peaks at the sentential,
-phrasal and syllabic frequencies are observed in 13/18, 11/18 and
-18/18 participants respectively. In condition 3,
-statistically significant peaks at the sentential, phrasal and
-syllabic frequencies are observed in 11/18, 12/18 and 18/18
-participants respectively. In condition 4,
-statistically significant peaks at the sentential, phrasal and
-syllabic frequencies are observed in 14/18, 5/18 and 17/18
-participants respectively.
 
 \end{document}
 
