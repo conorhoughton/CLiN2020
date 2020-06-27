@@ -198,8 +198,7 @@ and lack semantically-related words.
 Eighteen right-handed, native English speakers (11 female, mean age 26
 years (range 22 - 32 years)) participated in this study. All
 participants gave written, informed consent prior to undertaking the
-study and were paid £20. Ethical approval for our experimental
-procedures were obtained from the University of Bristol Faculty of
+study and were paid £20. Participants were screened for dyslexia and hearing impairments. Ethical approval for our experimental procedures were obtained from the University of Bristol Faculty of
 Science ethics board. All methods were performed in accordance with
 the relevant guidelines and regulations.
 
@@ -217,8 +216,8 @@ available Praat software \cite{BoersmaWeenink2018}.
 categories: adjective, subject, verb, object. Words were selected if
 they were synthesised clearly by the speech synthesizer and if they
 could be easily categorised into a distinct word category.  This was
-to avoid verbs, such as ``ride'' which can
-often be used as nouns. Nouns were pluralised and all sentences were
+to avoid verbs, such as ``ride'', which can
+also be used as nouns. Nouns were pluralised and all sentences were
 played in the present tense.
 
 Sentences were made by randomly selecting words from each of the four
@@ -228,8 +227,8 @@ adjective, subject noun, verb, object noun
 \end{center}
 These sentences were then independently ranked in terms of how much
 sense they made by 290 online participants recruited through Prolific
-Academic. Participants were presented with 110 pairs of sentences, ten
-of these were an attention trap; participant were asked to press
+Academic. In this online study, participants were presented with 110 pairs of sentences. Ten
+of these were an attention trap in which participants were asked to press
 \lq{F}\rq{} in response to sentences containing the word
 \lq{}fish\rq{} and were punished with a time out if they made a
 mistake. For the remaining 100 pairs they selected the sentence which
@@ -261,42 +260,18 @@ ungrammatical &\textbf{SU}: scare trams boys huge&\textbf{NU}: write mugs beds b
 
 \subsection*{Experimental Procedures}
 
-In total, 18 participants listened to 120 trials. For each of the four
-conditions, 30 trials were presented. A trial was made up of thirteen
-four-word sentences, played back to back in a continuous stream with
-no acoustic gap between the sentences. Five trials were put together
-to make a block. Each block consisted of five trials of the same
-condition with an 800 ms break between trials. At the end of each
-block participants were asked to rate the sentences on a scale of one
-to five in terms of how much sense the sentences made to them on
-average using a button press. Following the button press, the next
-block was played after a delay of 1200 ms. Blocks were presented in a
-random order and the order of the blocks was counterbalanced across
-participants.
+Each trial contained a sequence of thirteen four word sentences played back to back in a continuous stream. Each word was 320 ms long and trials lasted 16.64 seconds. In total, participants listened to 120 trials, with 30 trials for each of the four conditions. Blocks were made up of five trials from the same condition. Within each block, trials were presented to the participants one after the other with an 800 ms gap between trials. At the end of each block, participants were asked to rate the sentences on a scale of one
+to five in terms of how much sense the sentences within the trials they had just heard made to them on average using a button press. Following the button press, the next block was played after a delay of 1200 ms. Blocks were presented in a random order and the order of the blocks was counterbalanced across participants. At the end of each block participants were given a ten second break, with a longer two minute break at the halfway point.
 
 \subsection*{EEG Recording}
 
-EEG was continuously recorded with a 32-channel EEG system fitted on a
-standard electrode layour elasticised cap using a BrainAmp DC
-amplifier (Brain Products GmbH). Signals were digitized at a sampling
-rate of 1,000 Hz (bandpass filter = 0.01–400 Hz) and referenced to the
-vertex (Cz), as in \cite{DingEtAl2017}. The impedance of the
-electrodes was kept below 5kohms. Eyeblink artifacts were removed
-using ICA: an independent component was removed if in its topography
-the mean power over the most frontal three channels was more than
-twenty times stronger than the mean power over all other channels. The
-signals of interest are in the low-frequency region, at 1/1.28,
-2/1.28, and 4/1.28 Hz and so the EEG signal was lowpass filtered to 25
-Hz. Data were referenced offline to a common average reference and the
-responses to each individual trial were epoched.
+EEG signals were sampled at 1000 Hz from 32 Ag/AgCl electrodes fitted on a standard electrode layout elasticised cap using a BrainAmp DC amplifier (Brain Products GmbH). The EEG was recorded in DC mode, using a low-pass filter of 1000 Hz (fifth-order Butterworth filter with 30 dB/octave). FCz was used as a reference channel. The impedance of the electrodes was kept below 5 kOhms. Recordings were analysed offline using \texttt{Matlab} (Mathworks Inc.) and the \texttt{Fieldtrip} toolbox \cite{FieldTrip}. Eyeblink artifacts were removed using ICA. An independent component was removed if in its topography the mean power over the most frontal four channels (Fp1, Fp2, F7 and F8) was two times greater than the mean power over all other channels, as in \citet{DingEtAl2017}. As our signals of interest are in the low-frequency region, at 1/1.28 (sentences), 2/1.28 (phrases), and 4/1.28 Hz (syllables), the EEG signals were filtered offline using a 25 Hz low-pass filter (sixth-order Butterworth IIR). Data were re-referenced offline to a common average reference. For each condition, individual trials (16.64s long) were epoched. Upon sound onset there is a transient EEG response and so the first four syllables (1.28 seconds) in each epoch were removed from the analysis. This meant that the overall length of the analysed part of each trial was 15.36 seconds, corresponding to 48 syllables x 0.32 s.
+
 
 \subsection*{Data analysis}
 
-Upon sound onset there is a transient EEG response and so the first
-sentence in each trial was removed from the data. This meant that the
-overall trial length was 15.36 seconds (1.28 seconds x 12
-sentences). The remaining EEG signal was converted into the frequency
-domain using the discrete fourier transform with a frequency
+The EEG signal for each trial was converted into the frequency
+domain using the discrete Fourier transform with a frequency
 resolution of 0.065 Hz, that is, 1/15.36 Hz. The complex-valued
 Fourier coefficient of the trail $k$, $X_k(f)$, is then used to
 calculate the inter-trial phase coherence .
@@ -345,7 +320,8 @@ statistically significant peak at 3/1.28 Hz in three out of the four
 conditions.
 
 \begin{figure}[tbp]
-\includegraphics[width=\linewidth]{ITPC_by_condition.png}
+%\includegraphics[width=\linewidth]{ITPC_by_condition.png}
+\includegraphics[width=\linewidth]{Exp1_grand_average_ITPC_per_condition.png}
 \caption{\textbf{The spectrum of inter trial phase coherence in the
     EEG response to sentences from each of the four conditions.} These
   figures show the grand average of ITPC over all participants and
@@ -362,7 +338,7 @@ coherence at each of the three frequencies of interest in the EEG
 response (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz),
 Fig.~\ref{MainEffects}. A statistically significant effect of grammar
 was observed at the syllabic rate, with a greater ITPC peak for
-grammatically well-formed sentences ($F=14.0673$, $n=18$ subjects,
+grammatically well-formed sentences ($F(1,17)=14.0673$, $n=18$ subjects,
 $p=0.0016$, $\mu(\mathrm{G}) = 0.2402 \pm 0.1434$, $\mu(\mathrm{U}) =
 0.2096 \pm 0.1381$; here, and elsewhere $\mu(\mathrm{C})$ is the mean of
 condition C with the $\pm$ indicating the standard deviation). At the
@@ -371,9 +347,9 @@ effect (Fig.~\ref{MainEffects}B) of both grammar and semantics: both
 correct grammar and sensible semantics were associated with a
 significantly greater peak in ITPC strength at the phrasal rate than
 sentences with incorrect grammar or semantically unrelated words
-(grammar: $F=14.0673$, $n=18$ subjects $p=0.0016$, $\mu(\mathrm{G})=
+(grammar: $F(1,17)=14.0673$, $n=18$ subjects $p=0.0016$, $\mu(\mathrm{G})=
 0.2402 \pm 0.1434$, $\mu(\mathrm{U})= 0.2096 \pm 0.1381$; semantics:
- $F=12.5283$, $n=18$ subjects, $p=0.0025$, $\mu(\mathrm{S}) = 0.0648
+ $F(1,17)=12.5283$, $n=18$ subjects, $p=0.0025$, $\mu(\mathrm{S}) = 0.0648
 \pm 0.0328$, $\mu(\mathrm{N}) = 0.0459 \pm 0.0226$). No interaction
 effects were observed ($p=0.7530$).
 
