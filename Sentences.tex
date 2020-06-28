@@ -41,42 +41,18 @@
 \begin{abstract}
 
 How the human cognitive system is able to comprehend language has been
-a matter of recent debate. 
-%
-%
-On the one hand the brain may make use of
+a matter of recent debate. On the one hand the brain may make use of
 learned grammatical rules to decompose sentences into a hierarchy of
 syntactic structures to generate meaning. On the other hand the brain
 may rely on simpler, statistical methods where the generation of
-meaning relies on sequential processing. 
-%
-%
-Cortical activity has been shown to track speech at the rate of
-syllable, phrase and sentence presentation.
-%
-%
-Our goal is to shed light on the extent to which hierarchical
-structure plays a role in language processing during sentence
-comprehension as measured by the cortical tracking of phrases. To this
-end we use human EEG to record from participants as they listen to
-streams of four word sentences.
-%
-%
-We confirm that cortical activity does synchronise with the rate at
-which syllables, phrases and sentences are presented.
-%
-%
-Sentence stimuli that contain both appropriate grammar and semantic
-information generate a full brain response at the rate of phrase
-presentation. This response is reduced if either grammar or semantic
-information is absent. In sentences that lack both correct grammar and
-meaningful semantics, the response at the phrasal rate disappears.
-%
-%
-This suggests that both syntax and semantics are important
-contributors during sentence processing, as opposed to just syntax
-alone. 
-%
+meaning relies on sequentia processing of lexical information. To
+investigate these we recorded EEG from participants as they listen to
+streams of isochronously-presented words. In our different conditions
+there are grammatical and semantic manipulationa: the words in the
+stream can or cannot be parsed into phrases and sentences which are,
+or are not, semantically sensible. These manipulations affect the
+cortical activity synchronised with the rate at which syllables,
+phrases and sentences were presented.
 
 \end{abstract}
 
@@ -220,31 +196,33 @@ to avoid verbs, such as ``ride'', which can
 also be used as nouns. Nouns were pluralised and all sentences were
 played in the present tense.
 
-Sentences were made by randomly selecting words from each of the four
-word categories in the order 
+Four conditions were created (see Table~\ref{\label{tab:conditions}): sensical and nonsensical
+grammatical sentences (SG and NG) as well as two ungrammatical
+conditions in which the words for sensical and nonsensical sentences
+were re-ordered as verb, noun, noun, adjective: the SU and NU
+conditions respectively. For the SG and NG grammatical sentences words
+from the noun, adjective and verb categories were randomly selected
+and ordered as
 \begin{center}
-adjective, subject noun, verb, object noun
+  adjective, noun_1, verb, noun_2.
 \end{center}
-These sentences were then independently ranked in terms of how much
-sense they made by 290 online participants recruited through Prolific
-Academic. In this online study, participants were presented with 110 pairs of sentences. Ten
-of these were an attention trap in which participants were asked to press
-\lq{F}\rq{} in response to sentences containing the word
-\lq{}fish\rq{} and were punished with a time out if they made a
-mistake. For the remaining 100 pairs they selected the sentence which
-\lq{}sounds more normal in everyday speech\rq{}. Elo chess ranking
-\cite{Elo1978} was used to derive individual scores for each sentence
-from the pairwise comparisons. This established a ranking from sense
-to nonsense. The top 20 sentences were chosen to form the
-\lq{}sensical\rq{} sentence conditions and the bottom 20 were chosen
-to form the \lq{}nonsensical\rq{} sentence conditions.
-
-Based on these sensical and nonsensical sentences four different conditions were created: the
-original sensical sentences and nonsensical sentences along with two ungrammatical conditions in which the words for sensical and nonsensical sentences were re-ordered as
+The resulting sentences were then independently ranked in terms of how
+much sense they made by 290 online participants recruited through
+Prolic Academic. Participants were presented with 110 pairs of
+sentences, ten of these were an attention trap; participant were asked
+to press `F' in response to sentences containing the word `fish' and
+were punished with a time out if they made a mistake. For the
+remaining 100 pairs they selected the sentence which `sounds more
+normal in everyday speech'. Elo chess ranking \cite{Elo1978} was used
+to derive individual scores for each sentence from the pairwise
+comparisons. This established a ranking from sense to nonsense. The
+top 20 sentences were chosen to form the sensical SG condition and the
+bottom 20 were chosen to form the nonsensical NG conditions.  To
+obtain the ungrammatical SU and NU conditions the words from the SG
+and NG conditions respectively were re-ordered as
 \begin{center}
-     verb, subject noun, object noun, adjective
+verb, noun_1, noun_2, adjective.
 \end{center}
-These four conditions are summarized in Table~\ref{tab:conditions}.
 
 \begin{table}
 \begin{tabular}{l|ll}
@@ -265,7 +243,28 @@ to five in terms of how much sense the sentences within the trials they had just
 
 \subsection*{EEG Recording}
 
-EEG signals were sampled at 1000 Hz from 32 Ag/AgCl electrodes fitted on a standard electrode layout elasticised cap using a BrainAmp DC amplifier (Brain Products GmbH). The EEG was recorded in DC mode, using a low-pass filter of 1000 Hz (fifth-order Butterworth filter with 30 dB/octave). FCz was used as a reference channel. The impedance of the electrodes was kept below 5 kOhms. Recordings were analysed offline using \texttt{Matlab} (Mathworks Inc.) and the \texttt{Fieldtrip} toolbox \cite{FieldTrip}. Eyeblink artifacts were removed using ICA. An independent component was removed if in its topography the mean power over the most frontal four channels (Fp1, Fp2, F7 and F8) was two times greater than the mean power over all other channels, as in \citet{DingEtAl2017}. As our signals of interest are in the low-frequency region, at 1/1.28 (sentences), 2/1.28 (phrases), and 4/1.28 Hz (syllables), the EEG signals were filtered offline using a 25 Hz low-pass filter (sixth-order Butterworth IIR). Data were re-referenced offline to a common average reference. For each condition, individual trials (16.64s long) were epoched. Upon sound onset there is a transient EEG response and so the first four syllables (1.28 seconds) in each epoch were removed from the analysis. This meant that the overall length of the analysed part of each trial was 15.36 seconds, corresponding to 48 syllables x 0.32 s.
+EEG signals were sampled at 1000 Hz from 32 Ag/AgCl electrodes fitted
+on a standard electrode layout elasticised cap using a BrainAmp DC
+amplifier (Brain Products GmbH). The EEG was recorded in DC mode,
+using a low-pass filter of 1000 Hz (fifth-order Butterworth filter
+with 30 dB/octave). FCz was used as a reference channel. The impedance
+of the electrodes was kept below 5 kOhms. Recordings were analysed
+offline using \texttt{Matlab} (Mathworks Inc.) and the
+\texttt{Fieldtrip} toolbox \cite{FieldTrip}. Eyeblink artifacts were
+removed using ICA. An independent component was removed if in its
+topography the mean power over the most frontal four channels (Fp1,
+Fp2, F7 and F8) was two times greater than the mean power over all
+other channels, as in \citet{DingEtAl2017}. As our signals of interest
+are in the low-frequency region, at 1/1.28 (sentences), 2/1.28
+(phrases), and 4/1.28 Hz (syllables), the EEG signals were filtered
+offline using a 25 Hz low-pass filter (sixth-order Butterworth
+IIR). Data were re-referenced offline to a common average
+reference. For each condition, individual trials (16.64s long) were
+epoched. Upon sound onset there is a transient EEG response and so the
+first four syllables (1.28 seconds) in each epoch were removed from
+the analysis. This meant that the overall length of the analysed part
+of each trial was 15.36 seconds, corresponding to 48 syllables x 0.32
+s.
 
 
 \subsection*{Data analysis}
@@ -320,8 +319,7 @@ statistically significant peak at 3/1.28 Hz in three out of the four
 conditions.
 
 \begin{figure}[tbp]
-%\includegraphics[width=\linewidth]{ITPC_by_condition.png}
-\includegraphics[width=\linewidth]{Exp1_grand_average_ITPC_per_condition.png}
+\includegraphics[width=\linewidth]{grand_average.png}
 \caption{\textbf{The spectrum of inter trial phase coherence in the
     EEG response to sentences from each of the four conditions.} These
   figures show the grand average of ITPC over all participants and
@@ -367,12 +365,12 @@ strength of ITPC were observed (Fig.~\ref{MainEffects}A).
 \caption{\textbf{Main effects from the repeated measures 2-way ANOVA.}
   The main effects of grammar and sensible semantics on the strength
   of the ITPC at each of the three target frequencies of interest
-  (1/1.28 Hz, 2/1.28 Hz and 4/1.28 Hz). A statistically significant
-  effect of grammar was observed at the syllabic rate, with a greater
-  ITPC peak for grammatically well-formed sentences.  A main effect of
-  grammar and semantics was also observed at the phrasal rate. No interactions
-  between grammar and semantics are present. 
-  *: $p<0.05$, **:$p<0.005$.  }
+  (sentence - 1/1.28 Hz, phrase - 2/1.28 Hz and syllalble - 4/1.28
+  Hz). A statistically significant effect of grammar was observed at
+  the syllabic rate, with a greater ITPC peak for grammatically
+  well-formed sentences.  A main effect of grammar and semantics was
+  also observed at the phrasal rate. No interactions between grammar
+  and semantics are present.  *: $p<0.05$, **:$p<0.005$.  }
 \label{MainEffects}
 \end{figure}
 
@@ -421,6 +419,43 @@ result of the expectancy of four word sentences given by the prior
 presentation of sentences from the grammatical conditions.
 
 \section*{Discussion}
+
+The most basic effect was as predicted, is similar syllable-rate
+effects in all four conditions.
+
+Higher-level effects were less straigtforward. Eg the sentence peak
+was missing in the GS condition contrary to previous research (DIng
+2016, 2017, Makov et al 2017 - see
+https://www.jneurosci.org/content/37/32/7772.abstract). The presence
+of the sentence peak in the ungrammatical conditions agrees with Frank
+& Yang's observation that statistical regularities at the level of
+lexical category may be sufficient to induce a peak in the power
+spectrum. Indeed the ungrammatical condition featured many lexical
+category regularities at a 4-word cycle, e.g. both Adj and Verb
+occurred every 4 words.3- At the phrase rate, grammatical 2-word
+phrases showed stronger ITPC than 2-word phrases in the ungrammatical
+conditions (supporting the role of syntax in sentence
+processing).
+
+Interestingly, the ITPC for sensical conditions was higher than for
+nonsensical condition at the phrase frequency (supporting the
+importance of semantic information)I would then conclude someho,
+perhaps saying that the repetion of lexical category effect in 2 is
+intereting and we explore in in (Burroughs et al Sci reports)NB In
+point 2 above I would not dwell onto why the sentence peak was missing
+in SG condition beyond standard reasons like signal to noise etc and
+the admittance that this is unexpected.----So, in
+sum:Given the lack of time and discussion of this among us in
+light of the later Sci reports results I'd be as brief and as matter
+of fact and non-speculating here as possible. ANd importantly I
+would definitely delete the C&Chater para because the folloqing para
+is not just consistent with them but in fact with ANY approach that
+has a notion of a sentence.  I'd just leave the discussion of hte
+points outlined above in this comment
+
+
+
+
 
 We used EEG to record cortical activity in response to sentences
 composed of four single-syllable words that can combine to form a noun
